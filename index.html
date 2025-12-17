@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>🛒 საყიდლების კალათა</h1>
+      <button
+        id="refresh-button"
+        class="refresh-button"
+        onclick="location.reload()">
+        <i class="fas fa-sync-alt"></i> განახლება
+      </button>
+    </header>
+
+    <div class="container">
+      <div class="search-section">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="პროდუქტის ძიება სათაურის მიხედვით..." />
+      </div>
+
+      <main class="main-content">
+        <div class="cart-products-section">
+          <h2>პროდუქტები კალათაში</h2>
+          <div id="product-list" class="product-list">
+            <p id="loading-message">მონაცემების ჩატვირთვა...</p>
+          </div>
+        </div>
+
+        <aside class="cart-summary">
+          <h2>შეჯამება</h2>
+          <div class="summary-details">
+            <p>
+              უნიკალური პროდუქტები: <span id="unique-products-count">0</span>
+            </p>
+            <p>საერთო რაოდენობა (Items): <span id="total-quantity">0</span></p>
+            <hr />
+            <p class="grand-total">
+              ჯამური ფასი: <span id="grand-total">$0.00</span>
+            </p>
+          </div>
+          <button class="checkout-button">ყიდვა</button>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
